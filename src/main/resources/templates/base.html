@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,59 +33,59 @@
 </head>
 <body>
 
-<!-- start header Area -->
-<header id="header">
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+    <!-- start header Area -->
+    <header id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
+                        <a href="tel:+880 1234 654 953">
+                            <span class="text">+880 1234 654 953</span>
+                        </a>
+                        <a class="book-now" href="#">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="home.html"><img src="img/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li ><a th:classappend="${pageTitle == 'home'}? 'active' : ''" href="/">Home</a></li>
+                        <li ><a th:classappend="${pageTitle == 'about'}? 'active' : ''" href="about">About</a></li>
+                        <li><a th:classappend="${pageTitle == 'trainers'}? 'active' : ''" href="trainers">Trainers</a></li>
+                        <li class="menu-has-children"><a th:classappend="${pageTitle == 'blog'}? 'active' : ''" href="">Blog</a>
+                            <ul>
+                                <li><a href="blog-home">Blog Home</a></li>
+                                <li><a href="blog-single">Blog Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-has-children"><a th:classappend="${pageTitle == 'pages'}? 'active' : ''" href="">Pages</a>
+                            <ul>
+                                <li><a href="schedule">Schedule</a></li>
+                                <li><a href="courses">Courses</a></li>
+                                <li><a href="elements">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li><a th:classappend="${pageTitle == 'contact'}? 'active' : ''" href="contact">Contact</a></li>
                     </ul>
-                </div>
-                <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                    <a href="tel:+880 1234 654 953">
-                        <span class="text">+880 1234 654 953</span>
-                    </a>
-                    <a class="book-now" href="#">Book Now</a>
-                </div>
+                </nav><!-- #nav-menu-container -->
             </div>
         </div>
-    </div>
-    <div class="container main-menu">
-        <div class="row align-items-center justify-content-between d-flex">
-            <div id="logo">
-                <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-            </div>
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="trainers.html">Trainers</a></li>
-                    <li class="menu-has-children"><a href="">Blog</a>
-                        <ul>
-                            <li><a href="blog-home.html">Blog Home</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="">Pages</a>
-                        <ul>
-                            <li><a href="schedule.html">Schedule</a></li>
-                            <li><a href="courses.html">Courses</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
-        </div>
-    </div>
-</header>
+    </header>
 
-    <th:block layout:fragment = "content">
+    <th:block layout:fragment="content">
 
     </th:block>
 

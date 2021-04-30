@@ -1,6 +1,7 @@
 package com.blh.yogaflexkotlin.application.controllers
 
 import org.springframework.stereotype.Controller
+import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
@@ -9,39 +10,48 @@ class DefaultController {
     // ALL GETS ENDPOINTS
 
     @GetMapping("/")
-    fun home(): String {
-        return "index"
+    fun home(model: Model): String{
+        model.addAttribute("pageTitle", "home")
+        return "home"
     }
     @GetMapping("/about")
-    fun about(): String {
+    fun about(model: Model): String{
+        model.addAttribute("pageTitle", "about")
         return "about"
     }
     @GetMapping("/blog-home")
-    fun blogHome(): String {
+    fun blogHome(model: Model): String{
+        model.addAttribute("pageTitle", "blog")
         return "blog-home"
     }
     @GetMapping("/blog-single")
-    fun blogSingle(): String {
+    fun blogSingle(model: Model): String{
+        model.addAttribute("pageTitle", "blog")
         return "blog-single"
     }
     @GetMapping("/contact")
-    fun contact(): String {
+    fun contact(model: Model): String{
+        model.addAttribute("pageTitle", "contact")
         return "contact"
     }
     @GetMapping("/courses")
-    fun courses(): String {
+    fun courses(model: Model): String{
+        model.addAttribute("pageTitle", "pages")
         return "courses"
     }
     @GetMapping("/elements")
-    fun elements(): String {
+    fun elements(model: Model): String{
+        model.addAttribute("pageTitle", "pages")
         return "elements"
     }
     @GetMapping("/schedule")
-    fun schedule(): String {
+    fun schedule(model: Model): String {
+        model.addAttribute("pageTitle", "pages")
         return "schedule"
     }
     @GetMapping("/trainers")
-    fun trainers(): String {
+    fun trainers(model: Model): String {
+        model.addAttribute("pageTitle", "trainers")
         return "trainers"
     }
 }
